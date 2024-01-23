@@ -1,0 +1,21 @@
+{
+  "name": "love-dj/think-queue-kafka",
+  "description": "kafka connector for think-queue",
+  "license": "MIT",
+  "type": "think-extend",
+  "keywords": [
+    "think-queue",
+    "kafka",
+    "message",
+    "queue"
+  ],
+  "require": {
+    "php": ">=7.2.5",
+    "topthink/think-queue": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "think\\queue\\": "src"
+    }
+  }
+}
