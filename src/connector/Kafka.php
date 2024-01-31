@@ -4,6 +4,7 @@ namespace think\queue\connector;
 
 use Exception;
 use RdKafka;
+use think\queue\Connector;
 use think\queue\InteractsWithTime;
 use think\queue\job\Kafka as KafkaJob;
 
@@ -212,7 +213,7 @@ class Kafka extends Connector
                     throw new \RuntimeException($message->errstr(), $message->err);
             }
         } catch (\RdKafka\Exception $exception) {
-            throw new \RuntimeException('Could not pop from the queue', 0, $exception);
+            throw new \RuntimeException('不能从队列中跳出来', 0, $exception);
         }
     }
 
